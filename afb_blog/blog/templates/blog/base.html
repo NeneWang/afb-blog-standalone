@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+{% load staticfiles%}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Replace CDN Later with the thing -->
+   
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+
+<style>
+    .navbar-custom{
+        background-color:#FFD000; 
+    }
+
+    .grey{
+        background-color:lightgray; 
+    }
+
+</style>
+
+<body>
+    <nav class="navbar fixed-top navbar-light navbar-expand navbar-custom ">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'blogs' %}">Blogs</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="https://afreebird.org/blog.html">Back to AFB <span class="sr-only">(current)</span></a>
+           
+          </div>
+        </div>
+        </div>
+      </nav>
+<div class="container">
+    <h1 class="pb-5"></h1>
+    <h1 class="pb-3"></h1>
+    {% block content %}{% endblock %}
+    
+</div>
+
+
+<h1 class="pb-5" ></h1>
+</body>
+
+
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+
+	<!-- External JavaScripts
+	============================================= -->
+	<script src="{% static 'js/jquery.js'%}"></script>
+	<script src="{% static 'js/plugins.js'%}"></script>
+
+	<!-- Footer Scripts
+	============================================= -->
+
+	<script src="{% static 'js/functions.js'%}"></script>
+<script  src="{% static 'js/bootstrap.min.js'%}"></script>
+</html>
